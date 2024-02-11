@@ -14,11 +14,11 @@ public class Product {
         public int getGrossPrice() { return (100 + vat) * netPrice / 100; }
 
         public String getDescription(){
-            return String.format("%-10s : %5d / %5d", name, getNetPrice(), getGrossPrice());
+            return String.format("%-10s | %5d | %5d", name, getNetPrice(), getGrossPrice());
         }
 
         public String toString() {
-            return String.format("produkt:%s", name);
+            return String.format("product:%s", name);
         }
 
         public String getCSVString(){ return String.format("%s,%d,%d", name, netPrice, vat); }
